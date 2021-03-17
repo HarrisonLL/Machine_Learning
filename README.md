@@ -3,3 +3,5 @@ This folder includes summaries of typical machine learning method and data model
 Notes are summarized from EECS 545 (Machine Learning) and STATS 503 (Statistical Learning) from 
 the University of Michigan.
 I will keep updating upon I finish the courses.
+The txt file is a short but sweet summary.
+Later, I will upload a pdf form including formulas. 
