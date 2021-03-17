@@ -1,3 +1,4 @@
+Part I. ML methods
 - Random Forest:
     ensemble method;
     take average of prediction outcomes from a set of DTs:
@@ -89,6 +90,7 @@
      Kmans:
 		Pros: efficient, running time is O(N*t*d*k), where t is #iterations, d is dimension, and k is #clusters. 
 		Cons: need to run many times to get numbers of clusters (elbow method)
+
      Hierarchical Clustering (a type of agglomerative clustering):
 		Pros: can get numbers of clusters through dendrogram (AKA just run once) 
 		Cons: running time is O(N**3)
@@ -104,21 +106,33 @@
     idea: mapping lower dimension matrix to higher dimension matrix using a function
 
 
-- Other idea: Parametric / non-Parametric model
-		|                            |
-		|			     |
-		V                            V
-	      finite numbers of parameter / changes according to the size of dataset (KNN)
-	       has a function             / no function
+- Modele type summary:
+====================================================================================================
+			Generative(used Bayesian rule)		Discriminative(directly find Pr(y|X))
+----------------------------------------------------------------------------------------------------
+Parametric		Discriminative Analysis (LDA, QDA)	Logistic Regression
+(has functional form)	Naive Bayes				Neural Network
+(#param doesn't change)		
+----------------------------------------------------------------------------------------------------
+Non-Parametric							KNN, Tree-based Method (RF), 
+								Generative Additive model (GAM)
+====================================================================================================
 
-	      discriminative / probablitic(generative) model
-		|                            |
-		|			     |
-		V                            V
-		not the right	apply Bayes rules to infer P(y|x)
-		KNN,RF,LR,SVM	Bayesian Network: Naive Bayes.., Hidden Markov Chain
 
     
+
+Part II. data modeling techniques
+
+Data preprocessing:
+- handling missing value
+   - imputation: KNN, forward or backward filling after sorting
+   - replace with mean/median/mode
+   - delete
+- handling outlier
+   - detection: distance based (nearest neighbor) or density based (LOF)
+   - against: robust regression
+
+Modeling:
 - Evaluation Metric
     - classification: 
         - accuracy
@@ -137,6 +151,3 @@
 - handling time series dataset: 
     - way1: generate information about changes in time, and use traditional ML model
     - way2: use time series model or DL model having memorizing unit (LSTM, RNN, etc)
-
-
-
