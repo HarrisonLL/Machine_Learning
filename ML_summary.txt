@@ -88,7 +88,7 @@ Part I. ML methods
 
 
 - Unsupervised: Matrix factorization, PCA, Kmeans, hierarchical
-     Kmans:
+     Kmeans:
 		Pros: efficient, running time is O(N*t*d*k), where t is #iterations, d is dimension, and k is #clusters. 
 		Cons: need to run many times to get numbers of clusters (elbow method)
 
@@ -107,7 +107,7 @@ Part I. ML methods
     idea: mapping lower dimension matrix to higher dimension matrix using a function
 
 
-- Modele type summary:
+- Model type summary:
 ====================================================================================================
 			Generative(used Bayesian rule)		Discriminative(directly find Pr(y|X))
 ----------------------------------------------------------------------------------------------------
