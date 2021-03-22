@@ -1,58 +1,5 @@
 Part I. ML methods
 
-- Random Forest:
-    ensemble method;
-    take average of prediction outcomes from a set of DTs:
-            - regression: average
-            - classification: majority vote
-    pros and cons:
-        - pros: generally good performance due to not correlated trees
-        - cons: could be black-box model
-
-    
-- Boosting:
-    final vote is * weighted average
-    trees and weights are learned sequentially
-
-    details:
-        - downweight: if weight correctly
-          upweight: if weight incorrectly
-        - a set of weak learners that collaboratively becomes an effective learner after ensembling
-
-    - Gradient Boost:
-        To avoid overfitting on gradient, a new weaker learner f_t is introduced:
-            The f_t is added to the negative of the gradient of F_t-1 to get the loss.
-            Minimize the loss to get the f_t, and the weight alpha_t.
-
-    - Gradient Boost vs AdaBoosting difference
-        Gradient Boost is more generic,
-                     while AdaBoosting uses exponential function in loss.
-
-    pros and cons:
-        - pros: generally performs better than RF
-        - cons: sensitive to outliers 
-                                    because the result is dependent upon previous errors
-
-
-- SVM/SVR
-    idea: 
-        SVM: producing a hyperplan that seperates the dataset,
-             support vectors are those on or inside the margin.
-        SVR: producing a line, supported by a eposilon tube, fitting the dataset,
-             support vectors are those on or outside the margin (eposilon tube).
-
-    details to note:
-        mathematical details is first to write the problem as constrained optimization,
-        by adding constrained equality to the optimization equation (Lagrangian).
-        Then solve the problem by primal(min-max) then recover the dual(max-min) optimization.
-    
-    pros and cons:
-        pros: memory efficient: only need to store support vectors
-              works well when d>n
-
-        cons: if the dataset is large, the training time is very long (O(n**3)).
-              fails when having many noise
-
 
 - Linear Regression & Penalized Linear Regression
     idea: OLS: objective is to minimize the sum of squared errors
@@ -81,10 +28,73 @@ Part I. ML methods
 
 - Naive Bayes
     idea: use Bayes rules to find posterior probability distribution
+	  derive the class conditional distribution through multiplication of probs in training sample
 
     pros and cons: 
         pros: works well in high dimension (such as text classification)
         cons: assumes independence of each predictors
+
+- Linear Discriminant analysis
+    idea: use Bayes rules to find posterior probability distribution
+	  derive the class conditional distribution through Gaussian distribution (so it becomes the assumption of distribution of training data)
+
+
+-- Tree-based model--
+
+- Random Forest:
+    ensemble method;
+    take average of prediction outcomes from a set of DTs:
+            - regression: average
+            - classification: majority vote
+    pros and cons:
+        - pros: generally good performance due to not correlated trees
+        - cons: could be black-box model
+
+    
+- Boosting:
+        trees and weights are learned sequentially (samples are downweighted or unweighted )
+	final vote is * weighted average
+
+
+    details:
+        - downweight: if samples are weighted correctly
+          upweight: if samples are weighted incorrectly
+        - a set of weak learners that collaboratively becomes an effective learner after ensembling
+
+    - Gradient Boost:
+        To avoid overfitting on gradient, a new weaker learner f_t is introduced:
+            The f_t is added to the negative of the gradient of F_t-1 to get the loss.
+            Minimize the loss to get the f_t, and the weight alpha_t.
+
+    - Gradient Boost vs AdaBoosting difference
+        Gradient Boost is more generic,
+                     while AdaBoosting uses exponential function in loss.
+
+    pros and cons:
+        - pros: generally performs better than RF
+        - cons: sensitive to outliers 
+                                    because the result is dependent upon previous errors
+-- hyperplane --
+
+- SVM/SVR
+    idea: 
+        SVM: producing a hyperplan that seperates the dataset,
+             support vectors are those on or inside the margin.
+        SVR: producing a line, supported by a eposilon tube, fitting the dataset,
+             support vectors are those on or outside the margin (eposilon tube).
+
+    details to note:
+        mathematical details is first to write the problem as constrained optimization,
+        by adding constrained equality to the optimization equation (Lagrangian).
+        Then solve the problem by primal(min-max) then recover the dual(max-min) optimization.
+    
+    pros and cons:
+        pros: memory efficient: only need to store support vectors
+              works well when d>n
+
+        cons: if the dataset is large, the training time is very long (O(n**3)).
+              fails when having many noise
+
 
 
 - Unsupervised: Matrix factorization, PCA, Kmeans, hierarchical
