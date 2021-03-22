@@ -43,6 +43,7 @@ Part I. ML methods
 
 - Random Forest:
     ensemble method;
+    for each split, only take a random subset of features to form a partition （this where the randomness comes in）
     take average of prediction outcomes from a set of DTs:
             - regression: average
             - classification: majority vote
