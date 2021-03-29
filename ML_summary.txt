@@ -125,8 +125,16 @@ Part I. ML methods
     CNN: having many sets of CNN layers and maxpool layers before FC layer
          ideas: padding, stride
 
-- Other idea: Kernel
-    idea: mapping lower dimension matrix to higher dimension matrix using a function
+- Other idea:
+    Kernel Trick
+    idea: 
+	  mapping lower dimension matrix to higher dimension matrix using a function including cross product of X
+	  Instead of transform entire dataset to higher dimension, just using cross product of X will produce the result
+	    e.g. K(x,x') = (1 + <x, x'>)**2  <=> K(x, x')= <b(x), b'(x)>, where b(x)=(1, sqrt(x1), sqrt(x2), x1^2, x2^2, sqrt(2)x1x2)
+    use case: 
+	  SVM with kernel
+          kernelized ridge regression
+
 
 
 - Model type summary:
