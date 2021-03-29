@@ -41,8 +41,16 @@ Part I. ML methods
 
 -- Tree-based model--
 
-- Random Forest:
-    ensemble method;
+- Decision Tree:
+    idea: splitting data by attribute and threshold at each node. 
+	  attribute and threshold are selected by maximized information gain, which is the change of impurity after one split
+	  tree pruning: minimizing the total impurity in each node
+	  impurity measure: could be Entropy or Gini Index
+    pros: easy to interpetate 
+ 
+	
+- Random Forest: (ensemble method)
+    idea: 
     for each split, only take a random subset of features to form a partition （this where the randomness comes in）
     take average of prediction outcomes from a set of DTs:
             - regression: average
@@ -52,7 +60,8 @@ Part I. ML methods
         - cons: could be black-box model
 
     
-- Boosting:
+- Boosting: (ensemble method)
+	idea:
         trees and weights are learned sequentially (samples are downweighted or unweighted )
 	final vote is * weighted average
 
@@ -79,16 +88,18 @@ Part I. ML methods
 
 - SVM/SVR
     idea: 
-        SVM: producing a hyperplan that seperates the dataset,
+        SVM: producing a hyperplan that seperates the dataset.
+	     the goal is to maximize the minimum distance (or the margin) between data and hyperplane
              support vectors are those on or inside the margin.
         SVR: producing a line, supported by a eposilon tube, fitting the dataset,
              support vectors are those on or outside the margin (eposilon tube).
 
     details to note:
-        mathematical details is first to write the problem as constrained optimization,
-        by adding constrained equality to the optimization equation (Lagrangian).
-        Then solve the problem by primal(min-max) then recover the dual(max-min) optimization.
-    
+
+	We can solve the problem by dual(max-min) and then recover to primal(min-max), to 1) kernalize SVM to produce non-linear 
+	boundary; 2) efficiently compute the result when d >> n.
+        mathematical details can be viewed in the pdf file.
+ 
     pros and cons:
         pros: memory efficient: only need to store support vectors
               works well when d>n
