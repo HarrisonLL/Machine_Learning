@@ -82,8 +82,9 @@ Part I. ML methods
 
     pros and cons:
         - pros: generally performs better than RF
-        - cons: sensitive to outliers 
-                                    because the result is dependent upon previous errors
+        - cons: sensitive to outliers, because the result is dependent upon previous errors
+		can lead to overfit, since bias is decreased each iteration. Typically stop early is a 			solution
+
 -- hyperplane --
 
 - SVM/SVR
