@@ -162,9 +162,18 @@ Data preprocessing:
    - delete
 - handling outlier
    - detection: distance based (nearest neighbor) or density based (LOF)
+		easier way: mean +- 3 sd
+			    regression: statistical test :internal studentized deviation 
    - against: robust regression
 
 Modeling:
+- variable selection:
+	correlation check;
+	lasso automate selection	
+
+- model selection:
+	bias vs variance trade off
+
 - Evaluation Metric
     - classification: 
         - accuracy
@@ -173,12 +182,13 @@ Modeling:
         - F1: score combination of precision and recall
         - ROC curve (TP vs FP) and AUC (0~1)
     - Regression: 
-        - Rooted Mean Square Error: lower better
-        - R^2 (0~1): higher better
+        - Rooted Mean Square Error (sort of averaged RSS): lower better
+        - R^2 (RSS/TSS) (0~1): higher better
 
 - handling imbalance dataset:
     - way1: add class weight in loss function
     - way2: generate noise for the minority class (SMOTE)
+    - way3: if does not care about accuracy too much, can switch performance measure
 
 - handling time series dataset: 
     - way1: generate information about changes in time, and use traditional ML model
