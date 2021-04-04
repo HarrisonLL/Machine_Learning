@@ -83,7 +83,7 @@ Part I. ML methods
     pros and cons:
         - pros: generally performs better than RF
         - cons: sensitive to outliers, because the result is dependent upon previous errors
-		can lead to overfit, since bias is decreased each iteration. Typically stop early is a 			solution
+		can lead to overfit, since bias is decreased each iteration. Typically stop early is a solution
 
 -- hyperplane --
 
@@ -156,10 +156,16 @@ Non-Parametric							KNN, Tree-based Method (RF),
 Part II. data modeling techniques
 
 Data preprocessing:
+
+- Exploratory data analysis (EDA)
+  - find correlation between features (in clf) or feature with outcome (in regression)   
+  - variable distribution (Kernel Density Estimation for continuous, Boxplot for categorical)
+
 - handling missing value
    - imputation: KNN, forward or backward filling after sorting
    - replace with mean/median/mode
    - delete
+
 - handling outlier
    - detection: distance based (nearest neighbor) or density based (LOF)
 		easier way: mean +- 3 sd
@@ -168,8 +174,8 @@ Data preprocessing:
 
 Modeling:
 - variable selection:
-	correlation check;
-	lasso automate selection	
+	by correlation;
+	fit a model first: lasso(automate selection), or RF (manually find variable importance)
 
 - model selection:
 	bias vs variance trade off
