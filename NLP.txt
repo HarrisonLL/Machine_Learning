@@ -1,0 +1,16 @@
+Part III. NLP related ML
+
+data cleaning: 1) tokenize (sentences to words)
+	       2) to lowercase
+	       3) remove stop words
+	       4) remove symbols and correct punctuation(ensure every words in English dict)
+               5) stem and lemmatization (preferred, root is mostly english)
+
+convert to matrix 1) single word count matrix 2) n-grams matrix 3) tf-idf
+
+prediction modeling: NB for spam detection; Ensemble methods..
+
+topic modeling: Latent Dirichlet allocation (LDA)
+
+duplicate (or similar) document detection: shingling --> min hash --> cosine/jaccard similarity
+			                   shingling --> min hash --> locality sensitivity hashing (LSH) [convert to bins, and then hash bins]
