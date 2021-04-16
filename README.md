@@ -4,6 +4,6 @@ Notes are summarized from EECS 545 (Machine Learning) and STATS 503 (Statistical
 the University of Michigan.
 I will keep updating upon I finish the courses.
 
-The ML.txt file is a short but sweet summary.
-The PDF file includes necessary summary and algorithm details.
-The NLP.txt: I am also trying to summarize some NLP (Natural Language Processing) techniques here that I know.
+> The ML.txt file is a short but sweet summary.
+> The PDF file includes necessary summary and algorithm details.
+> The NLP.txt: I am also trying to summarize some NLP (Natural Language Processing) techniques here that I know.
