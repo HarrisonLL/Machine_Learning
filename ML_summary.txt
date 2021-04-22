@@ -111,6 +111,12 @@ Part I. ML methods
 
 
 - Unsupervised: Matrix factorization, PCA, Kmeans, hierarchical
+     - PCA:	the objective is to find a direction (unit vector) 
+		such that the variance of data is maximized in this direction.
+
+		details: can use SVD to solve the problem; directly calculate covariance matrix could be costly
+		usage: dimension reduction (construction of new feature space)
+			data visualization 
      -Kmeans:
 		Pros: efficient, running time is O(N*t*d*k), where t is #iterations, d is dimension, and k is #clusters. 
 		Cons: need to run many times to get numbers of clusters (elbow method)
