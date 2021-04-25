@@ -110,7 +110,7 @@ Part I. ML methods
 
 
 
-- Unsupervised: Matrix factorization, PCA, Kmeans, hierarchical
+- Unsupervised: dimension reduction(PCA..), Kmeans, hierarchical
      - PCA:	the objective is to find a direction (unit vector) 
 		such that the variance of data is maximized in this direction.
 
@@ -141,6 +141,7 @@ Part I. ML methods
     -use case: 
 	 	SVM with kernel
          	kernelized ridge regression
+		kernelized PCA
 
 
 
