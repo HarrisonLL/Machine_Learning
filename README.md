@@ -1,5 +1,5 @@
 # Machine_Learning
-This folder includes summaries of typical machine learning method and data modeling techniques.
+This folder includes summaries of typical machine learning method and data processing techniques.
 Notes are mainly summarized from EECS 545 (Machine Learning) and STATS 503 (Statistical Learning) at 
 the University of Michigan.
 I will keep updating upon I finish the courses.
