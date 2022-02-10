@@ -5,6 +5,6 @@ the University of Michigan.
 I will keep updating while learning new tech in ML.
 
 1) The "ML.txt" file is a short but sweet summary.
-2) The PDF file ("Machine Learning Notes .pdf") includes necessary summary and algorithm details.
+2) The "Machine Learning Notes .pdf" includes necessary summary and algorithm details.
 3) The "NLP.txt": I am also trying to summarize some NLP (Natural Language Processing) techniques here that I know.
 4) The "DL&NLP summary.pdf" file includes my notes from a previous internship. It summarizes some advanced deep learning models such as LSTM, transformers, and BERT. The use case is NLP tasks. My understanding, however, is not in depth.
