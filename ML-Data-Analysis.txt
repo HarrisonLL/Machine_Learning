@@ -185,7 +185,7 @@ Modeling:
 	fit a model first: lasso(automate selection), or RF (manually find variable importance)
 
 - model selection:
-	bias vs variance trade off
+	based on bias vs variance trade off
 
 - Evaluation Metric
     - classification: 
